@@ -1,0 +1,21 @@
+@import "../../styles/vars.scss";
+
+.container {
+    width: $container-width;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $desktop) {
+        width: 100%;
+    }
+
+    @media (max-width: 550px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+    }
+}

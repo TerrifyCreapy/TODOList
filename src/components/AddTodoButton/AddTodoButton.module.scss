@@ -1,0 +1,18 @@
+.add {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 400;
+
+    &>span {
+        margin-left: calc(12px + 20 * (100vw / 1590));
+    }
+
+    &>span::first-letter {
+        text-transform: uppercase;
+    }
+}

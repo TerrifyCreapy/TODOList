@@ -1,0 +1,71 @@
+@import "../../styles/vars.scss";
+
+.todo_form {
+    display: flex;
+    flex-direction: column;
+    max-width: $todo;
+    width: calc(100% - 15px);
+
+    .text__wrapper {
+        display: flex;
+        flex-direction: column;
+        border-radius: 16px;
+
+        &>* {
+            font-family: $fontRoboto;
+            padding: 10px 17px;
+            background-color: #F4F4F4;
+            font-weight: 500;
+            font-size: 24px;
+            color: rgba(0, 0, 0, 1);
+
+            &::placeholder {
+                text-transform: capitalize;
+                color: rgba(0, 0, 0, .4)
+            }
+        }
+
+        &>*:nth-child(1) {
+            outline: none;
+            border: none;
+            border: 1px solid $font-gray;
+            border-radius: 16px 16px 0 0;
+        }
+
+        &>*:nth-child(2) {
+            outline: none;
+            border: none;
+            border-right: 1px solid $font-gray;
+            border-left: 1px solid $font-gray;
+            border-bottom: 1px solid $font-gray;
+            border-radius: 0 0 16px 16px;
+        }
+
+        &>textarea {
+            resize: none;
+        }
+    }
+
+    .button_area {
+        max-width: 250px;
+        width: 100%;
+        display: flex;
+
+        &>* {
+            width: 48%;
+            font-weight: bold;
+            padding: 10px 0;
+            font-size: 18px;
+            text-transform: capitalize;
+
+            &:first-child {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    @media (max-width: 409px) {
+        width: 90vw;
+    }
+
+}

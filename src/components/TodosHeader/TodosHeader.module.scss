@@ -1,0 +1,10 @@
+@import "../../styles/vars.scss";
+
+.header {
+    width: 100%;
+    padding: 10px calc(0.0767 * 100vw) 10px calc(0.01267 * 100vw);
+    background-color: $font-red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

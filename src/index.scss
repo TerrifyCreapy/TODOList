@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rosario:wght@700&display=swap');
+@import "./styles/vars.scss";
+
+
+:root {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: 16px;
+    color: $font-red;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+}

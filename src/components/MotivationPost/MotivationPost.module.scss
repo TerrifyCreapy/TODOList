@@ -1,0 +1,16 @@
+@import "../../styles/vars.scss";
+
+.Motivation__post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.motivation__text {
+    color: #000;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: $fontRoboto;
+}

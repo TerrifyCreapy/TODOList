@@ -1,0 +1,62 @@
+@import "../../styles/vars.scss";
+
+.card {
+    padding: 41px 41px 93px 39px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    transform: scale(0) rotate(0);
+    animation: cardAppearing 3s forwards;
+    max-width: 512px;
+
+    &>*:not(:last-child) {
+        margin-bottom: 42px;
+    }
+
+    &>*:last-child {
+        margin-top: 132px;
+    }
+
+    &>div {
+        @media (max-width: $tablet) {
+            text-align: center;
+        }
+    }
+
+    .sign {
+        font-size: 24px;
+        font-weight: bold;
+        font-family: $fontRowdies;
+        color: #000;
+    }
+
+    .continue__with>*:first-child {
+        margin-bottom: 7px;
+    }
+
+    .continue__with {
+        width: calc(200px + 241 * (100vw / 1090));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+
+    @media (max-width: $tablet) {
+        text-align: center;
+        padding: 41px 0 93px 0;
+        max-width: 432px;
+        width: 100%;
+    }
+}
+
+@keyframes cardAppearing {
+    from {
+        transform: scale(0) rotate(0);
+    }
+
+    to {
+        transform: scale(1) rotate(360deg);
+    }
+}

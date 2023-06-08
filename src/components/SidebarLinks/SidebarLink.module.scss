@@ -1,0 +1,31 @@
+@import "../../styles/vars.scss";
+
+.sidebar__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+
+    span {
+        color: #6B6B6B;
+        margin-left: calc(100vw / 80);
+        font-size: calc(18px + 6 * (100vw / 1280));
+        text-transform: capitalize;
+        font-family: $fontRoboto;
+    }
+
+    svg path {
+        fill: #6B6B6B;
+    }
+
+}
+
+.active {
+    span {
+        color: $font-red;
+    }
+
+    svg path {
+        fill: $font-red;
+    }
+}

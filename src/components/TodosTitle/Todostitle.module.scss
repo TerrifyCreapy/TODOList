@@ -1,0 +1,12 @@
+@import "../../styles/vars.scss";
+
+.todos__title {
+    font-family: $fontRoboto;
+    font-size: calc(28px + 20 * (100vw / 1090));
+    font-weight: bold;
+    text-transform: capitalize;
+
+    @media (max-width: $laptop) {
+        text-align: center;
+    }
+}

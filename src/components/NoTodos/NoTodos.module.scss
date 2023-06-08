@@ -1,0 +1,13 @@
+@import "../../styles/vars.scss";
+
+.no_todos {
+    color: #000;
+    font-size: calc(18px + 6 * (100vw / 1090));
+    font-weight: bold;
+    padding: 20px 0;
+
+    @media (max-width: $laptop) {
+        text-align: center;
+    }
+
+}

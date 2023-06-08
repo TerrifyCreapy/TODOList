@@ -1,0 +1,22 @@
+@import "../../styles/vars.scss";
+
+.delete_button {
+    background-color: white;
+    outline: none;
+    border: 2px solid #DADADA;
+    border-radius: 15px;
+    width: 100%;
+    max-width: calc(84px + 92 * (100vw / 1090));
+    padding: 20px 0;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .12);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+        font-family: $fontRoboto;
+        font-size: calc(14px + 4 * (100vw / 1090));
+        font-weight: 400;
+    }
+}

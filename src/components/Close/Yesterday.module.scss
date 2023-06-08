@@ -1,0 +1,19 @@
+@import "../../styles/vars.scss";
+
+.close {
+    margin-left: calc(100vw /7);
+    margin-top: 37px;
+    max-width: $todo;
+
+    @media (max-width:416px) {
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (min-width: 960px) {
+        margin-left: 20%;
+
+    }
+}

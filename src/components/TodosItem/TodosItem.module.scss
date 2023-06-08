@@ -1,0 +1,77 @@
+@import "../../styles/vars.scss";
+
+.todo_container {
+    display: flex;
+    width: 100%;
+    max-width: $todo;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+
+
+    .todo__content {
+        position: relative;
+        width: 96%;
+        padding: 8px 25% 19px 8px;
+        border: 1px solid #E3E3E3;
+        border-radius: 8px;
+        font-size: 22px;
+        font-family: $fontRoboto;
+        font-weight: 400;
+
+        &>*:last-child {
+            position: absolute;
+            right: calc(11px + 20 * (100vw / 1090));
+            bottom: -20%;
+        }
+
+        &_title {
+            font-size: 24px;
+            color: #000;
+            margin-bottom: 10px;
+            word-wrap: break-word;
+        }
+
+        &_content {
+            color: #787878;
+            word-wrap: break-word;
+        }
+
+
+    }
+
+    .complete_checkbox {
+        display: block;
+        margin-top: 6px;
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+        background-color: $light_gray;
+        border-radius: 50%;
+        position: relative;
+        transition: all .3s linear;
+
+
+        &.completed {
+            &>* {
+                opacity: 1;
+            }
+        }
+
+        &>* {
+            opacity: 0;
+            transition: all .3s linear;
+            position: absolute;
+            top: 25%;
+            left: 75%;
+            transform: translate(-62.5%, -25%);
+        }
+
+        @media (max-width: $tablet) {}
+    }
+
+    @media (max-width: $tablet) {
+        width: calc(100% - 10px);
+        gap: 10px;
+    }
+}

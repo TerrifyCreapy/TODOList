@@ -1,0 +1,47 @@
+@import "../../styles/vars.scss";
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: calc(24px + 12 * (100vw / 1570)); //36 -> 24
+    font-family: $fontRowdies;
+    font-weight: 400;
+
+    @media (max-width: $tablet) {
+        justify-content: center;
+    }
+
+}
+
+.logo {
+    width: 41px; //41 -> 31calc(31px + 10 * (100vw / 1570))
+    height: 41px;
+
+    svg {
+        width: 41px; //41 -> 31calc(31px + 10 * (100vw / 1570))
+        height: 41px;
+    }
+
+}
+
+.inversion {
+    span {
+        color: white;
+
+        @media (max-width: 425px) {
+            display: none;
+        }
+    }
+
+}
+
+.inversion {
+    rect:first-child {
+        fill: white;
+    }
+
+    rect:nth-child(n+2) {
+        fill: $font-red;
+    }
+}

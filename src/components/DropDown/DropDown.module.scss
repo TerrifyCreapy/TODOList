@@ -1,0 +1,22 @@
+.dropdown {
+    position: absolute;
+    background-color: transparent;
+    top: 125%;
+    width: 242px;
+    border: 1px solid grey;
+    border-radius: 24px;
+    transform: scale(0);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s;
+}
+
+.dropdown>*:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.dropdown.active {
+    pointer-events: all;
+    transform: scale(1);
+    opacity: 1;
+}

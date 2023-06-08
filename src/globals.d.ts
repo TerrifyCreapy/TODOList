@@ -1,0 +1,6 @@
+declare module "*.png"
+declare module "*.svg"
+declare module "*.web"
+declare module "*.scss"
+declare module "*.css"
+declare module "react-router"

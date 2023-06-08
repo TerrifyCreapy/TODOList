@@ -1,0 +1,52 @@
+@import "../../styles/vars.scss";
+
+.continue__with::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: red;
+    transition: all .5s ease-in-out;
+    z-index: 0;
+    border-radius: 8px;
+    opacity: .3;
+}
+
+.continue__with {
+    position: relative;
+    padding: 11px 0;
+    max-width: 432px;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #c0bcbc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color .5s linear;
+
+}
+
+.continue__with>* {
+    z-index: 100;
+}
+
+
+.continue__with:hover::before {
+    width: 100%;
+}
+
+.continue__with__text {
+    color: #000;
+    font-size: calc(14px + 4 * (100vw / 1090));
+    font-weight: 400;
+    font-family: $fontRoboto;
+}
+
+.icon {
+    margin-right: 10px;
+}
