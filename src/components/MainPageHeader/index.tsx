@@ -10,8 +10,8 @@ const MainPageHeader: FC = () => {
             <Container>
                 <HeaderLogo />
                 <div className={styles.auth__links}>
-                    <AuthLink path="#" text="Login" />
-                    <AuthLink path="#" text="Signup" />
+                    <AuthLink path="/auth?login=true" text="Login" />
+                    <AuthLink path="/auth" text="Signup" />
                 </div>
             </Container>
         </header>

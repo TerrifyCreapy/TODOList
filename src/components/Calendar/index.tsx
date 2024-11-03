@@ -20,10 +20,10 @@ const month = [
 function new_date(value: Date, forward = false): Date {
     if (forward) {
         const newYear =
-            value.getMonth() + 2 >= 12
+            value.getMonth() + 2 > 12
                 ? value.getFullYear() + 1
                 : value.getFullYear();
-        const newMonth = value.getMonth() + 2 >= 12 ? 1 : value.getMonth() + 2;
+        const newMonth = value.getMonth() + 2 > 12 ? 1 : value.getMonth() + 2;
         return new Date(`${newYear}-${newMonth}-01`);
     } else {
         const newYear =
