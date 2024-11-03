@@ -1,10 +1,8 @@
-import React from "react";
 import { IBrowserRouter } from "../interfaces/common/IBrowserRouter";
 import MainPage from "../pages/MainPage";
 import {
     auth_path,
     main_path,
-    today_path,
     todos_path,
     upcoming_path,
     yesterday_path,

@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import styles from "./Yesterday.module.scss";
 import TodosTitle from "../TodosTitle";
 import CompletedCount from "../CompletedCount";
@@ -33,10 +33,6 @@ const Close: FC<IClose> = ({ text }) => {
             />
         );
     });
-
-    function onAddTodo() {
-        addTodo();
-    }
 
     return (
         <div className={styles.close}>

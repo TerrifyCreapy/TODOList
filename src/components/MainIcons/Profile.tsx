@@ -1,5 +1,4 @@
 import { FC } from "react";
-import style from "./MainIcons.module.scss";
 
 const Profile: FC = () => {
     return (

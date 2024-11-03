@@ -1,4 +1,4 @@
-import { FC, useContext, useState } from "react";
+import { FC, useState } from "react";
 
 import styles from "./Card.module.scss";
 import HeaderLogo from "../HeaderLogo";
@@ -14,7 +14,7 @@ interface ICard {
 }
 
 const Card: FC<ICard> = ({ onLogIn }) => {
-    const [params, setParams] = useSearchParams();
+    const [params, _] = useSearchParams();
     const [isLogIn, setIsLogIn] = useState<boolean>(
         params.get("login") ? true : false,
     );

@@ -2,33 +2,33 @@ import { IUser } from "../interfaces/enteties/IUser";
 import firebase_config from "../constants/firebase_config";
 import { deleteDoc, doc, updateDoc } from "firebase/firestore";
 
-const {auth, firestore, firebase} = firebase_config;
+const { auth, firestore, firebase } = firebase_config;
 
 class FireBaseApi {
-    static async logInGoogle(): Promise<IUser|null> {
+    static async logInGoogle(): Promise<IUser | null> {
         const provider = new firebase.auth.GoogleAuthProvider();
         const { user } = await auth.signInWithPopup(provider);
-        if(!user) return null
+        if (!user) return null
         return {
-                uid: (user as IUser).uid,
-                email: (user as IUser).email,
-                displayName: (user as IUser).displayName,
-                photoURL: (user as IUser).photoURL
+            uid: (user as IUser).uid,
+            email: (user as IUser).email,
+            displayName: (user as IUser).displayName,
+            photoURL: (user as IUser).photoURL
         }
     }
     static async logInGitHub(): Promise<IUser | null> {
         const provider = new firebase.auth.GithubAuthProvider();
         const { user } = await auth.signInWithPopup(provider);
-        if(!user) return null
+        if (!user) return null
         return {
-                uid: (user as IUser).uid,
-                email: (user as IUser).email,
-                displayName: (user as IUser).displayName,
-                photoURL: (user as IUser).photoURL
+            uid: (user as IUser).uid,
+            email: (user as IUser).email,
+            displayName: (user as IUser).displayName,
+            photoURL: (user as IUser).photoURL
         }
-    } 
+    }
     static async logout(): Promise<number> {
-        const logout = await auth.signOut();
+        await auth.signOut();
         return 200;
     }
 
@@ -41,7 +41,6 @@ class FireBaseApi {
             createdAt: firebase.firestore.FieldValue.serverTimestamp(),
             date
         });
-        const documentId = data.id;
         return data;
     }
 

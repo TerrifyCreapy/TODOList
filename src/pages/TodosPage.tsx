@@ -52,7 +52,7 @@ const TodosPage: FC = observer(() => {
     const location = useLocation();
     const [params, _] = useSearchParams();
 
-    const [date, setDate] = useState<Date>(whatDate(location.pathname));
+    
 
     const [activeLink, setActiveLink] = useState<number>(
         location.pathname.endsWith("yesterday") ? 1 : 0,

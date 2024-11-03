@@ -1,7 +1,6 @@
 import { useCollection } from "react-firebase-hooks/firestore";
 import firebase_config from "../constants/firebase_config";
-import { query, where, collection, doc } from "firebase/firestore";
-import { ITodo } from "../interfaces/enteties/ITodo";
+import { query, where, collection } from "firebase/firestore";
 
 function toNumberDate(date: Date): number {
     const day = `${date.getDate()}`;
@@ -24,7 +23,7 @@ const useTodos = (date: Date, userId: string) => {
         where("date", "==", day),
         where("uid", "==", userId),
     );
-    const [value, loading, error] = useCollection(q);
+    const [value, loading, _] = useCollection(q);
 
     return { todos: value, loading };
 };

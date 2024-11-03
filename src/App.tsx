@@ -16,7 +16,7 @@ const App: FC = observer(() => {
     const navigate = useNavigate();
 
     const rootStore = useContext(StoreProvider);
-    const { user, loading, errors } = useAuth();
+    const { user, loading } = useAuth();
 
     const location = useLocation();
     useEffect(() => {

@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import styles from "./TodosItem.module.scss";
 
 import { ReactComponent as CompletedArrow } from "../../assets/Completed.svg";

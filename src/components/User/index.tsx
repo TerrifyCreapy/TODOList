@@ -3,8 +3,6 @@ import styles from "./User.module.scss";
 
 import DropDown from "../DropDown";
 import ActionLink from "../ActionLink";
-import Profile from "../MainIcons/Profile";
-import SettingsIcons from "../MainIcons/SettingsIcon";
 import LogoutIcon from "../MainIcons/LogOutIcon";
 
 interface IUser {

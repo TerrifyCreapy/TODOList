@@ -11,7 +11,7 @@ interface IContinueWith {
 const ContinueWith: FC<IContinueWith> = ({ img, network, onClick }) => {
     return (
         <button
-            onClick={(e) => (onClick ? onClick(network.toLowerCase()) : null)}
+            onClick={() => (onClick ? onClick(network.toLowerCase()) : null)}
             className={styles.continue__with}
         >
             <img className={styles.icon} src={img} alt="network" />

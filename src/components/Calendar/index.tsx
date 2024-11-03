@@ -108,7 +108,7 @@ const Calendar: FC = () => {
                 {new Array(daysInMonth(date.getMonth() + 1, date.getFullYear()))
                     .slice(daysPage * 12, (daysPage + 1) * 12)
                     .fill(undefined)
-                    .map((e, index) => (
+                    .map((_, index) => (
                         <span
                             className={`${styles.day} ${
                                 date.getDate() === index + 1 + daysPage * 12
