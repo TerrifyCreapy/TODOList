@@ -8,8 +8,9 @@ export default defineConfig({
     react(),
     svgr({
       svgrOptions: {
-        
+
       }
     })
   ],
+  base: "https://terrifycreapy.github.io/Todo-daily/"
 })
