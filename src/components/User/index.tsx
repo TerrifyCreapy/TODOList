@@ -20,9 +20,7 @@ const User: FC<IUser> = ({ displayName, photoURL, onLogOut }) => {
             onClick={() => setDropDown((value) => !value)}
         >
             <span>{displayName || "unknown"}</span>
-            {<img src={photoURL} alt="photo" /> || (
-                <div className={styles.no_img}></div>
-            )}
+            <img src={photoURL} alt="photo" />
             <DropDown active={dropDown}>
                 <div className={styles.drop_bottom}>
                     <ActionLink text="logout" action={onLogOut} variant="red">
