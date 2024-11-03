@@ -12,7 +12,6 @@ const firebaseConfig = {
     storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
     messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
     appId: import.meta.env.VITE_APP_ID,
-    measurementId: import.meta.env.VITE_MEASUREMENT_ID,
 };
 
 const app = firebase.initializeApp(firebaseConfig);
@@ -20,4 +19,4 @@ const app = firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const firestore = firebase.firestore();
 
-export default {auth, firestore, firebase};
+export default { auth, firestore, firebase };
