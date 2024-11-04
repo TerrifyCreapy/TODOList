@@ -1,4 +1,4 @@
-const baseUrl = import.meta.env.BASE || ""
+const baseUrl = import.meta.env.VITE_BASE || ""
 export const main_path = baseUrl + "/";
 export const auth_path = baseUrl + "/auth";
 export const todos_path = baseUrl + "/todos";
